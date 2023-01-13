@@ -6,6 +6,7 @@ import Header from './Header'
 import AddContact from './AddContact'
 import ContactList from './ContactList'
 import ContactDetail from './ContactDetail'
+import DeleteContact from './DeleteContact'
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
           <Route path="/" exact element={<ContactList contacts={contacts} getContactId={removeContactHandler} />}></Route>
           <Route path="/add" element={<AddContact addContactHandler={addContactHandler} />}></Route>
           <Route path="/contact/:id" element={<ContactDetail />}></Route>
+          <Route path="/delete/:id" element={<DeleteContact deleteContactId={removeContactHandler} />}></Route>
         </Routes>
         {/* <AddContact addContactHandler={addContactHandler} />
         <ContactList contacts={contacts} getContactId={removeContactHandler} /> */}

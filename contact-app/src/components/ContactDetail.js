@@ -5,7 +5,9 @@ import user from '../images/user.jpg'
 
 const ContactDetail = (props) => {
     const location = useLocation()
-    const { name, email } = location.state.contact
+    const { id, name, email } = location.state.contact
+    console.log(location)
+    console.log(props)
     // console.log(name, email)
     return (
         <div className='main' style={{ marginTop: "4rem" }}>
@@ -18,8 +20,13 @@ const ContactDetail = (props) => {
                     <div className='description'>{email}</div>
                 </div>
             </div>
-
-        </div>
+            <Link to={"/"}>
+                <button className='ui button blue'>View Contacts</button>
+            </Link>
+            <Link to={`/delete/${id}`} state={{ contact: location.state.contact }}>
+                <button className='ui button red' style={{ float: 'right' }}>Delete</button>
+            </Link>
+        </div >
     )
 };
 

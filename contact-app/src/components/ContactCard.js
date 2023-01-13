@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import user from '../images/user.jpg'
 
 const ContactCard = (props) => {
+    console.log(props.clickHandler)
     const { id, name, email } = props.contact;
     return (
         <div className='item' style={{ padding: "10px" }}>
@@ -13,7 +14,9 @@ const ContactCard = (props) => {
                     <div>{email}</div>
                 </Link>
             </div>
-            <i className='trash alternate outline icon' style={{ color: "red", marginTop: '10px', float: "right", fontSize: "1.5rem" }} onClick={() => props.clickHandler(id)}></i>
+            <Link to={`/delete/${id}`} state={{ contact: props.contact }} >
+                <i className='trash alternate outline icon' style={{ color: "red", marginTop: '10px', float: "right", fontSize: "1.5rem" }}></i>
+            </Link>
         </div >
     )
 };
