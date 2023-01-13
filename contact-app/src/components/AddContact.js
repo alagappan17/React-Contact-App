@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 class AddContact extends React.Component {
     state = {
@@ -11,8 +12,10 @@ class AddContact extends React.Component {
             alert("All the fields are mandatory!")
             return;
         }
+        alert("Contact Added Successfully")
         this.props.addContactHandler(this.state)
         this.setState({ name: "", email: "" })
+        // this.props.history.push("/")
     }
     render() {
         return (
@@ -28,6 +31,10 @@ class AddContact extends React.Component {
                         <input type='text' name='email' placeholder='email' value={this.state.email} onChange={(e) => this.setState({ email: e.target.value })}></input>
                     </div>
                     <button className='ui button blue'>Add</button>
+                    <Link to={"/"}>
+                        <button className='ui button blue' style={{ float: "right" }}>View Contacts</button>
+                    </Link>
+
                 </form>
             </div>
         );
