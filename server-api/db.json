@@ -1,9 +1,19 @@
 {
-    "contacts": [
-        {
-            "id": "fbd86dd2-6624-4d5a-8053-a65321dc6de0",
-            "name": "Alagappan N",
-            "email": "alagappan1703@gmail.com"
-        }
-    ]
+  "contacts": [
+    {
+      "id": "13e31572-0617-41d5-91ff-cc4426a1ca79",
+      "name": "Sri Venkateswara College Of Engineering",
+      "email": "2019it0717@svce.ac.in"
+    },
+    {
+      "id": "e28adc3e-0a65-4ac7-9dea-e37e111be0f6",
+      "name": "Alagappan N",
+      "email": "alagappanforwork@gmail.com"
+    },
+    {
+      "id": "71ada48b-bedf-4a1f-9c78-bdffa4101f3b",
+      "name": "Alan",
+      "email": "alan@outlook.com"
+    }
+  ]
 }

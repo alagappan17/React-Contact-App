@@ -17,7 +17,10 @@ const ContactCard = (props) => {
             <Link to={`/delete/${id}`} state={{ contact: props.contact }} >
                 <i className='trash alternate outline icon' style={{ color: "red", marginTop: '10px', float: "right", fontSize: "1.5rem" }}></i>
             </Link>
-        </div>
+            {/* <Link to={`/edit`} state={{ contact: props.contact }} >
+                <i className='edit alternate outline icon' style={{ color: "blue", marginTop: '10px', float: "right", fontSize: "1.5rem" }}></i>
+            </Link> */}
+        </div >
     )
 };
 
